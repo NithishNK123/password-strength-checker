@@ -1,0 +1,72 @@
+/* 1. Global Reset & Page Background */
+body {
+    background-color:cornsilk;
+}
+.app-container {
+    background-color: #ffffff; /* White background color inside the card box */
+    border: 1px solid #e2e8f0; /* Soft gray border outlines */
+    padding: 30px;             /* Internal padding spacing around content boxes */
+    border-radius: 8px;        /* Smooth rounded container corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Soft background shadow styling */
+    max-width: 400px;          /* Restricts maximum container scale width */
+    margin: 20px auto;         /* Centers the container element horizontally */
+    text-align: center;        /* Aligns inside elements cleanly to the center */
+} 
+/* Container for the structural layout elements below the main section */
+.results-layout-wrapper {
+    max-width: 800px;
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Numerical point score styling */
+.score-box {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1e3c72;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Security level badge styling */
+.status-badge {
+    padding: 12px 35px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 6px;
+    color: white;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Risk indicator status colors */
+.bg-weak { background-color: #e53e3e; }
+.bg-medium { background-color: #dd6b20; }
+.bg-strong { background-color: #38a169; }
+
+/* Standalone container for fix-actions list */
+.suggestions-card {
+    background-color: #ffffff; /* White background color inside the card box */
+    border: 1px solid #e2e8f0; /* Soft gray border outlines */
+    padding: 30px;             /* Internal padding spacing around content boxes */
+    border-radius: 8px;        /* Smooth rounded container corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Soft background shadow styling */
+    max-width: 400px;          /* Restricts maximum container scale width */
+
+}
+
+.suggestions-card h3 {
+    text-align: left;
+    color: #2a5298;
+}
+
+#feedbackList li {
+    color: #e53e3e;
+    font-weight: 500;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Password Strength Checker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <center>
+        <h1>Welcome to the Password Strength Checker</h1>
+    </center>
+
+    <h3><b>About this web application:</b></h3>
+    <ul>
+        <li>This web application checks the strength of your passwords.</li>
+        <li>It uses a scoring system to determine the strength of your password.</li>
+        <li>You can enter a password and see its strength in real-time.</li>
+        <li>This may help to secure your accounts.</li>
+    </ul>
+
+    <center>
+        <div class="app-container">
+            <h3>Enter your password below to check its strength:</h3>
+            <input type="password" id="passwordInput" placeholder="Type your password here..." style="margin-bottom: 15px;"><br>
+            <button id="checkBtn">Check Password Strength</button>
+            <div id="resultOutput" style="margin-top: 15px; font-weight: bold;"></div>
+        </div>
+
+        <!-- DYNAMIC RESULTS DISPLAY CONTAINER (CLEANED) -->
+        <div class="results-layout-wrapper">
+    
+            <!-- 1. Numerical Counter Box -->
+            <div id="scoreDisplay" class="score-box" style="display: none; margin: 15px auto;"></div>
+    
+            <!-- 2. Custom Offline Pie Chart Window -->
+            <div id="chartContainer" style="display: none; width: 250px; height: 250px; margin: 20px auto;">
+                <canvas id="strengthChart"></canvas>
+            </div>
+    
+            <!-- 3. Colorful Security Alert Box -->
+            <div id="statusBadge" class="status-badge" style="display: none; margin: 15px auto;"></div>
+    </center>
+            <!-- 4. Standalone Suggestions Container Card -->
+            <div id="suggestionsCard" class="card suggestions-card" style="display: none; text-align: left; margin: 20px auto; max-width: 500px;">
+                <h3>Suggestions to secure your password:</h3>
+                <ul id="feedbackList"></ul>
+            </div>
+    
+        </div>
+    
+
+    <!-- OFFLINE SCRIPTS LOADED AT THE BOTTOM IN THE CORRECT ORDER -->
+    <script src="{{ url_for('static', filename='chart.js') }}"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
